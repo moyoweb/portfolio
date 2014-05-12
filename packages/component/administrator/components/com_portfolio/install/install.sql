@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `#__portfolio_clients` (
+  `portfolio_client_id` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` char(36) NOT NULL,
+  `cck_fieldset_id` int(11) NOT NULL DEFAULT '1500',
+  `title` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL DEFAULT 'client',
+  `layout` varchar(255) NOT NULL DEFAULT 'default',
+  `fields` text,
+  `featured` tinyint(1) NOT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT '1',
+  `locked_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `locked_by` bigint(20) NOT NULL DEFAULT '0',
+  `created_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` bigint(20) NOT NULL DEFAULT '0',
+  `modified_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`portfolio_client_id`),
+  UNIQUE KEY `uuid` (`uuid`)
+) DEFAULT CHARSET=utf8;

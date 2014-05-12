@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_PORTFOLIO_VIEW_CLIENTS_DEFAULT_TITLE">
+		<message>
+            COM_PORTFOLIO_VIEW_CLIENTS_DEFAULT_DESC
+		</message>
+	</layout>
+    <fields name="params">
+        <fieldset name="basic">
+            <field
+                name="featured"
+                type="radio"
+                class="btn-group"
+                label="COM_PORTFOLIO_VIEW_CLIENTS_FEATURED_LABEL"
+                description="COM_PORTFOLIO_VIEW_CLIENTS_FEATURED_DESC"
+                default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field
+                name="limit"
+                type="text"
+                label="COM_PORTFOLIO_VIEW_CLIENTS_LIMIT_LABEL"
+                description="COM_PORTFOLIO_VIEW_CLIENTS_LIMIT_DESC"
+                default="6">
+            </field>
+        </fieldset>
+    </fields>
+</metadata>
