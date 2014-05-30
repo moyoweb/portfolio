@@ -24,7 +24,8 @@ class ComPortfolioDatabaseTableClients extends KDatabaseTableDefault
 
 		$config->append(array(
 			'behaviors' => array(
-				'com://admin/cck.database.behavior.elementable',
+                'orderable',
+                'com://admin/cck.database.behavior.elementable',
 				$relationable,
 				'com://admin/translations.database.behavior.translatable',
 				$routable,

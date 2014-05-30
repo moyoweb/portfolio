@@ -14,7 +14,10 @@ class ComPortfolioModelClients extends ComDefaultModelDefault
     {
         parent::__construct($config);
 
-        $this->_state->insert('featured', 'int', null, true);
+        $this->_state
+            ->insert('featured', 'int', null, true)
+            ->insert('next', 'int', null, true)
+            ->insert('previous', 'int', null, true);
     }
 
     /**
@@ -28,9 +31,18 @@ class ComPortfolioModelClients extends ComDefaultModelDefault
             $query->where('tbl.featured', '=', $state->featured);
         }
 
-        parent::_buildQueryWhere($query);
+        if ($state->next) {
+            $query->where('tbl.ordering', '>', $state->next);
+            $query->order('tbl.ordering', 'ASC');
+            $state->next = ''; // reset because of unique state
+        } else if ($state->previous) {
+            $query->where('tbl.ordering', '<', $state->previous);
+            $query->order('tbl.ordering', 'DESC');
+            $state->previous = ''; // reset because of unique state
+        }
 
         $query->where('tbl.enabled', '=', 1);
-    }
 
+        parent::_buildQueryWhere($query);
+     }
 }
