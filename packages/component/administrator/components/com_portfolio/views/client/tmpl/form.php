@@ -29,7 +29,7 @@
 			<? if($client->cck_fieldset_id) : ?>
 				<fieldset>
 					<legend><?= @text('FIELDS'); ?></legend>
-					<?= @service('com://admin/cck.controller.element')->cck_fieldset_id($client->cck_fieldset_id)->row($client->id)->table('portfolio_clients')->getView()->assign('row', $form)->layout('list')->display(); ?>
+					<?= @service('com://admin/cck.controller.element')->cck_fieldset_id($client->cck_fieldset_id)->row($client->id)->table('portfolio_clients')->getView()->assign('row', $client)->layout('list')->display(); ?>
 				</fieldset>
 			<? endif; ?>
 		</div>
@@ -54,7 +54,7 @@
 						<?= @helper('select.booleanlist', array('name' => 'enabled', 'selected' => $client->enabled)); ?>
 					</div>
 				</div>
-				<? if($client->isTranslateable()) : ?>
+				<? if($client->isTranslatable()) : ?>
 					<div class="control-group">
 						<label class="control-label"><?= @text('TRANSLATED'); ?></label>
 						<div class="controls">
