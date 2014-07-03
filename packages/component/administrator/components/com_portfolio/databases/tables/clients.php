@@ -20,8 +20,6 @@ class ComPortfolioDatabaseTableClients extends KDatabaseTableDefault
 			)
 		);
 
-		$routable = $this->getBehavior('com://admin/routes.database.behavior.routable');
-
 		$config->append(array(
 			'behaviors' => array(
 				'lockable',
@@ -33,7 +31,6 @@ class ComPortfolioDatabaseTableClients extends KDatabaseTableDefault
 				'com://admin/cck.database.behavior.elementable',
 				$relationable,
 				'com://admin/translations.database.behavior.translatable',
-				$routable,
 //				'com://admin/kutafuta.database.behavior.searchable',
 			),
 			'filters' => array(
