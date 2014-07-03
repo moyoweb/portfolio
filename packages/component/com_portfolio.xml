@@ -22,6 +22,8 @@
         <file>portfolio.php</file>
 
         <folder>databases</folder>
+        <folder>languages</folder>
+        <folder>models</folder>
         <folder>views</folder>
     </files>
 
