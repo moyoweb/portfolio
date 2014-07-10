@@ -17,7 +17,8 @@ class ComPortfolioModelClients extends ComDefaultModelDefault
         $this->_state
             ->insert('featured', 'int', null, true)
             ->insert('next', 'int', null, true)
-            ->insert('previous', 'int', null, true);
+            ->insert('previous', 'int', null, true)
+            ->insert('slug', 'string', null, true);
     }
 
     /**
