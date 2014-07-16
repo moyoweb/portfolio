@@ -42,7 +42,9 @@ class ComPortfolioModelClients extends ComDefaultModelDefault
             $state->previous = ''; // reset because of unique state
         }
 
-        $query->where('tbl.enabled', '=', 1);
+        if (!$state->isUnique()) {
+            $query->where('tbl.enabled', '=', 1);
+        }
 
         parent::_buildQueryWhere($query);
      }
