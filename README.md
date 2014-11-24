@@ -31,7 +31,7 @@ section:
 {
     "name": "moyo/portfolio",
     "type": "vcs",
-    "url": "https://git.assembla.com/moyo-content.portfolio.git"
+    "url": "https://github.com/cta-int/portfolio.git"
 }
 ```
 
