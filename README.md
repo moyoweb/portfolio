@@ -31,7 +31,7 @@ section:
 {
     "name": "moyo/portfolio",
     "type": "vcs",
-    "url": "https://github.com/cta-int/cck.git"
+    "url": "https://github.com/cta-int/portfolio.git"
 }
 ```
 
