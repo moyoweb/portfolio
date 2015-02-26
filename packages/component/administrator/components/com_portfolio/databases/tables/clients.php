@@ -40,4 +40,5 @@ class ComPortfolioDatabaseTableClients extends KDatabaseTableDefault
 
 		parent::_initialize($config);
 	}
+
 }
