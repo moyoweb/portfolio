@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="1.6">
     <name>Portfolio</name>
-    <author>Dave Li</author>
-    <creationDate>July 2013</creationDate>
+    <author>Moyo Web Architects</author>
+    <creationDate>July 2014</creationDate>
     <packagename>portfolio</packagename>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <url>http://www.moyoweb.nl/</url>
     <packager>Dave Li</packager>
     <packagerurl>http://www.moyoweb.nl/</packagerurl>
